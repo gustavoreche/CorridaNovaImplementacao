@@ -1,4 +1,10 @@
 # CorridaNovaImplementacao
-Este projeto, é o mesmo projeto do meu repositório "Corrida". Porém com mudanças na implementação, com a ajuda do dev Guilherme Biff Zarelli @gbzarelli
+Este projeto, é o mesmo projeto do meu repositório "Corrida". Porém com mudanças na implementação, com a ajuda do dev Guilherme Biff Zarelli [@gbzarelli](https://github.com/gbzarelli)
 
-[teste](https://github.com/gustavoreche/CorridaNovaImplementacao/blob/master/novaArquitetura.jpeg)
+
+
+# Nova arquitetura
+[](https://github.com/gustavoreche/CorridaNovaImplementacao/blob/master/novaArquitetura.jpeg)
+<img src="https://github.com/gustavoreche/CorridaNovaImplementacao/blob/master/novaArquitetura.jpeg">
+
+- Esta arquitetura foi desenha por Guilherme Biff Zarelli [@gbzarelli](https://github.com/gbzarelli)
