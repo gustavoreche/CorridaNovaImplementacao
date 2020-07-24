@@ -105,7 +105,7 @@ public class FormaDeComoExtraiAInformacaoDoLogTeste {
 		String qualquerTexto = EnumFormasDeExtracao.LOCAL.getCodigo();
 		Mockito.when(this.entradaDoUsuario.digitado()).thenReturn(qualquerTexto);
 		FormasDeExtracao verificaForma = formaMock.pegaForma();
-		assertEquals(Local.class, verificaForma.pegaFormaAtual());
+		assertEquals(Local.class, verificaForma.pegaForma());
 	}
 	
 	@Test
@@ -113,7 +113,7 @@ public class FormaDeComoExtraiAInformacaoDoLogTeste {
 		String qualquerTexto = EnumFormasDeExtracao.EXTERNO.getCodigo();
 		Mockito.when(this.entradaDoUsuario.digitado()).thenReturn(qualquerTexto);
 		FormasDeExtracao verificaForma = formaMock.pegaForma();
-		assertNotEquals(Local.class, verificaForma.pegaFormaAtual());
+		assertNotEquals(Local.class, verificaForma.pegaForma());
 	}
 	
 	@Test
@@ -121,7 +121,7 @@ public class FormaDeComoExtraiAInformacaoDoLogTeste {
 		String qualquerTexto = EnumFormasDeExtracao.EXTERNO.getCodigo();
 		Mockito.when(this.entradaDoUsuario.digitado()).thenReturn(qualquerTexto);
 		FormasDeExtracao verificaForma = formaMock.pegaForma();
-		assertEquals(Externo.class, verificaForma.pegaFormaAtual());
+		assertEquals(Externo.class, verificaForma.pegaForma());
 	}
 	
 	@Test
@@ -129,7 +129,7 @@ public class FormaDeComoExtraiAInformacaoDoLogTeste {
 		String qualquerTexto = EnumFormasDeExtracao.LOCAL.getCodigo();
 		Mockito.when(this.entradaDoUsuario.digitado()).thenReturn(qualquerTexto);
 		FormasDeExtracao verificaForma = formaMock.pegaForma();
-		assertNotEquals(Externo.class, verificaForma.pegaFormaAtual());
+		assertNotEquals(Externo.class, verificaForma.pegaForma());
 	}
 	
 	@Test
@@ -137,7 +137,7 @@ public class FormaDeComoExtraiAInformacaoDoLogTeste {
 		String qualquerTexto = EnumFormasDeExtracao.SAIR_DO_SISTEMA.getCodigo();
 		Mockito.when(this.entradaDoUsuario.digitado()).thenReturn(qualquerTexto);
 		FormasDeExtracao verificaForma = formaMock.pegaForma();
-		assertEquals(SairDoSistema.class, verificaForma.pegaFormaAtual());
+		assertEquals(SairDoSistema.class, verificaForma.pegaForma());
 	}
 	
 	@Test
@@ -145,7 +145,7 @@ public class FormaDeComoExtraiAInformacaoDoLogTeste {
 		String qualquerTexto = EnumFormasDeExtracao.LOCAL.getCodigo();
 		Mockito.when(this.entradaDoUsuario.digitado()).thenReturn(qualquerTexto);
 		FormasDeExtracao verificaForma = formaMock.pegaForma();
-		assertNotEquals(SairDoSistema.class, verificaForma.pegaFormaAtual());
+		assertNotEquals(SairDoSistema.class, verificaForma.pegaForma());
 	}
 	
 	@Test
@@ -153,7 +153,7 @@ public class FormaDeComoExtraiAInformacaoDoLogTeste {
 		String qualquerTexto = EnumFormasDeExtracao.CARACTERE_DIGITADO_ERRADO.getCodigo();
 		Mockito.when(this.entradaDoUsuario.digitado()).thenReturn(qualquerTexto);
 		FormasDeExtracao verificaForma = formaMock.pegaForma();
-		assertEquals(CaractereDigitadoErrado.class, verificaForma.pegaFormaAtual());
+		assertEquals(CaractereDigitadoErrado.class, verificaForma.pegaForma());
 	}
 	
 	@Test
@@ -161,7 +161,7 @@ public class FormaDeComoExtraiAInformacaoDoLogTeste {
 		String qualquerTexto = EnumFormasDeExtracao.LOCAL.getCodigo();
 		Mockito.when(this.entradaDoUsuario.digitado()).thenReturn(qualquerTexto);
 		FormasDeExtracao verificaForma = formaMock.pegaForma();
-		assertNotEquals(CaractereDigitadoErrado.class, verificaForma.pegaFormaAtual());
+		assertNotEquals(CaractereDigitadoErrado.class, verificaForma.pegaForma());
 	}
 	
 	@Test
@@ -169,7 +169,7 @@ public class FormaDeComoExtraiAInformacaoDoLogTeste {
 		String qualquerTexto = "sadsadasd";
 		Mockito.when(this.entradaDoUsuario.digitado()).thenReturn(qualquerTexto);
 		FormasDeExtracao verificaForma = formaMock.pegaForma();
-		assertEquals(CaractereDigitadoErrado.class, verificaForma.pegaFormaAtual());
+		assertEquals(CaractereDigitadoErrado.class, verificaForma.pegaForma());
 	}
 
 }

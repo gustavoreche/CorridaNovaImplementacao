@@ -13,16 +13,16 @@ public class Externo implements FormasDeExtracao {
 	}
 
 	@Override
-	public Class<? extends FormasDeExtracao> pegaForma(EnumFormasDeExtracao respostaDoUsuario) {
+	public Class<? extends FormasDeExtracao> verificaForma(EnumFormasDeExtracao respostaDoUsuario) {
 		if(respostaDoUsuario == EnumFormasDeExtracao.EXTERNO) {
 			System.out.println("EXTERNO");
-			return this.pegaFormaAtual();
+			return this.pegaForma();
 		}
-		return this.proximaForma.pegaForma(respostaDoUsuario);
+		return this.proximaForma.verificaForma(respostaDoUsuario);
 	}
 
 	@Override
-	public Class<? extends FormasDeExtracao> pegaFormaAtual() {
+	public Class<? extends FormasDeExtracao> pegaForma() {
 		return Externo.class;
 	}
 

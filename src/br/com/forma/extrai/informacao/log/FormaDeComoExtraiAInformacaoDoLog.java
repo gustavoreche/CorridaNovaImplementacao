@@ -56,7 +56,7 @@ public class FormaDeComoExtraiAInformacaoDoLog {
 	protected Class<? extends FormasDeExtracao> verificaResposta(String respostaDoUsuario) {
 		EnumFormasDeExtracao enumFormaDeExtracao = EnumFormasDeExtracao
 				.pegaEnumPeloCodigo(respostaDoUsuario);
-		return this.formaDeExtracaoDoLog.pegaForma(enumFormaDeExtracao);
+		return this.formaDeExtracaoDoLog.verificaForma(enumFormaDeExtracao);
 	}
 
 }

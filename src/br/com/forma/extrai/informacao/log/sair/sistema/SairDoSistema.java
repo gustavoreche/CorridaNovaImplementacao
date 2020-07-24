@@ -13,16 +13,16 @@ public class SairDoSistema implements FormasDeExtracao {
 	}
 
 	@Override
-	public Class<? extends FormasDeExtracao> pegaForma(EnumFormasDeExtracao respostaDoUsuario) {
+	public Class<? extends FormasDeExtracao> verificaForma(EnumFormasDeExtracao respostaDoUsuario) {
 		if(respostaDoUsuario == EnumFormasDeExtracao.SAIR_DO_SISTEMA) {
 			System.out.println("Você escolheu encerrar o sistema. Muito obrigado!!");
-			return this.pegaFormaAtual();
+			return this.pegaForma();
 		}
-		return this.proximaForma.pegaForma(respostaDoUsuario);
+		return this.proximaForma.verificaForma(respostaDoUsuario);
 	}
 
 	@Override
-	public Class<? extends FormasDeExtracao> pegaFormaAtual() {
+	public Class<? extends FormasDeExtracao> pegaForma() {
 		return SairDoSistema.class;
 	}
 

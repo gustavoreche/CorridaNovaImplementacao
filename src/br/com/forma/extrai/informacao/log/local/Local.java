@@ -13,16 +13,16 @@ public class Local implements FormasDeExtracao {
 	}
 
 	@Override
-	public Class<? extends FormasDeExtracao> pegaForma(EnumFormasDeExtracao respostaDoUsuario) {
+	public Class<? extends FormasDeExtracao> verificaForma(EnumFormasDeExtracao respostaDoUsuario) {
 		if(respostaDoUsuario == EnumFormasDeExtracao.LOCAL) {
 			System.out.println("LOCAL");
-			return this.pegaFormaAtual();
+			return this.pegaForma();
 		}
-		return this.proximaForma.pegaForma(respostaDoUsuario);
+		return this.proximaForma.verificaForma(respostaDoUsuario);
 	}
 	
 	@Override
-	public Class<? extends FormasDeExtracao> pegaFormaAtual() {
+	public Class<? extends FormasDeExtracao> pegaForma() {
 		return Local.class;
 	}
 
