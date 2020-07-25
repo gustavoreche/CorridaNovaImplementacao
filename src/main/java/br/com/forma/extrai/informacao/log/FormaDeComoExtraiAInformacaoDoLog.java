@@ -3,6 +3,7 @@ package br.com.forma.extrai.informacao.log;
 import java.lang.reflect.Constructor;
 
 import br.com.entrada.usuario.EntradaDoUsuario;
+import br.com.forma.extrai.informacao.log.caractere.digitado.errado.CaractereDigitadoErrado;
 import br.com.forma.extrai.informacao.log.local.Local;
 
 public class FormaDeComoExtraiAInformacaoDoLog {
@@ -26,7 +27,7 @@ public class FormaDeComoExtraiAInformacaoDoLog {
 			respostaDoUsuario = this.entradaDoUsuario.digitado();
 			formaDeExtracao = this.verificaResposta(respostaDoUsuario);
 			repeticoes++;
-		} while (formaDeExtracao == null && repeticoes < LIMITE_MAXIMO_DE_REPETICAO);
+		} while (formaDeExtracao.getName().equals(new CaractereDigitadoErrado().getClass().getName()) && repeticoes < LIMITE_MAXIMO_DE_REPETICAO);
 		if(repeticoes == LIMITE_MAXIMO_DE_REPETICAO) {
 			System.out.println("Número de tentativas excedidas... O sistema será encerrado!");
 		}
