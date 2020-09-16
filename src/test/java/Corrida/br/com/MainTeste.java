@@ -1,6 +1,8 @@
-package br.com.main;
+package Corrida.br.com;
 
 import org.junit.Test;
+
+import Corrida.br.com.Main;
 
 public class MainTeste {
 	
