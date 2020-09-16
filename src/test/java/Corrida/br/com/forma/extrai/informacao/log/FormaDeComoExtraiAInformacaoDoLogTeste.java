@@ -2,7 +2,6 @@ package Corrida.br.com.forma.extrai.informacao.log;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -13,9 +12,6 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import Corrida.br.com.entrada.usuario.EntradaDoUsuario;
-import Corrida.br.com.forma.extrai.informacao.log.EnumFormasDeExtracao;
-import Corrida.br.com.forma.extrai.informacao.log.FormaDeComoExtraiAInformacaoDoLog;
-import Corrida.br.com.forma.extrai.informacao.log.FormasDeExtracao;
 import Corrida.br.com.forma.extrai.informacao.log.caractere.digitado.errado.CaractereDigitadoErrado;
 import Corrida.br.com.forma.extrai.informacao.log.externo.Externo;
 import Corrida.br.com.forma.extrai.informacao.log.local.Local;
@@ -95,12 +91,6 @@ public class FormaDeComoExtraiAInformacaoDoLogTeste {
 		Class<? extends FormasDeExtracao> verificaResposta = forma
 				.verificaResposta(EnumFormasDeExtracao.SAIR_DO_SISTEMA.getCodigo());
 		assertNotEquals(new CaractereDigitadoErrado().getClass().getName(), verificaResposta.getName());
-	}
-	
-	@Test
-	public void exibeOpcoesDeFormaDeExtracaoDoLog_soExibirTextos() {
-		forma.exibeOpcoesDeFormaDeExtracaoDoLog();
-		assertTrue(true);
 	}
 	
 	@Test

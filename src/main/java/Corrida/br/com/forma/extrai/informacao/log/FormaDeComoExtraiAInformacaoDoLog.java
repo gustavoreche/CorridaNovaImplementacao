@@ -5,17 +5,20 @@ import java.lang.reflect.Constructor;
 import Corrida.br.com.entrada.usuario.EntradaDoUsuario;
 import Corrida.br.com.forma.extrai.informacao.log.caractere.digitado.errado.CaractereDigitadoErrado;
 import Corrida.br.com.forma.extrai.informacao.log.local.Local;
+import Corrida.br.com.front.TelaInicial;
 
 public class FormaDeComoExtraiAInformacaoDoLog {
 	
 	private FormasDeExtracao formaDeExtracaoDoLog;
 	private EntradaDoUsuario entradaDoUsuario;
+	private TelaInicial telaInicial;
 	
 	private static final int LIMITE_MAXIMO_DE_REPETICAO = 3;
 	
 	public FormaDeComoExtraiAInformacaoDoLog() {
 		this.formaDeExtracaoDoLog = new Local();
 		this.entradaDoUsuario = new EntradaDoUsuario();
+		this.telaInicial = new TelaInicial();
 	}
 	
 	public FormasDeExtracao pegaForma() {
@@ -23,7 +26,7 @@ public class FormaDeComoExtraiAInformacaoDoLog {
 		Class<? extends FormasDeExtracao> formaDeExtracao = null;
 		int repeticoes = 0;
 		do {
-			this.exibeOpcoesDeFormaDeExtracaoDoLog();
+			this.telaInicial.exibeOpcoesDeFormaDeExtracaoDoLog();
 			respostaDoUsuario = this.entradaDoUsuario.digitado();
 			formaDeExtracao = this.verificaResposta(respostaDoUsuario);
 			repeticoes++;
@@ -46,14 +49,6 @@ public class FormaDeComoExtraiAInformacaoDoLog {
 		}
 	}
 
-	protected void exibeOpcoesDeFormaDeExtracaoDoLog() {
-		System.out.println("Escolha a maneira de onde deseja obter as informações do log:");
-		System.out.println("1 - Local");
-		System.out.println("2 - Externo");
-		System.out.println("3 - Encerrar sistema");
-		System.out.print("R: ");
-	}
-	
 	protected Class<? extends FormasDeExtracao> verificaResposta(String respostaDoUsuario) {
 		EnumFormasDeExtracao enumFormaDeExtracao = EnumFormasDeExtracao
 				.pegaEnumPeloCodigo(respostaDoUsuario);
