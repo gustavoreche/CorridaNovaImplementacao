@@ -14,10 +14,8 @@ public class Local implements FormasDeExtracao {
 
 	@Override
 	public Class<? extends FormasDeExtracao> verificaForma(EnumFormasDeExtracao respostaDoUsuario) {
-		if(respostaDoUsuario == EnumFormasDeExtracao.LOCAL) {
-			System.out.println("LOCAL");
+		if(respostaDoUsuario == EnumFormasDeExtracao.LOCAL)
 			return this.pegaForma();
-		}
 		return this.proximaForma.verificaForma(respostaDoUsuario);
 	}
 	
