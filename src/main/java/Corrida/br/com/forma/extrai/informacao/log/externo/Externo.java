@@ -14,10 +14,8 @@ public class Externo implements FormasDeExtracao {
 
 	@Override
 	public Class<? extends FormasDeExtracao> verificaForma(EnumFormasDeExtracao respostaDoUsuario) {
-		if(respostaDoUsuario == EnumFormasDeExtracao.EXTERNO) {
-			System.out.println("EXTERNO");
+		if(respostaDoUsuario == EnumFormasDeExtracao.EXTERNO)
 			return this.pegaForma();
-		}
 		return this.proximaForma.verificaForma(respostaDoUsuario);
 	}
 
