@@ -2,12 +2,19 @@ package Corrida.br.com.forma.extrai.informacao.log.caractere.digitado.errado;
 
 import Corrida.br.com.forma.extrai.informacao.log.EnumFormasDeExtracao;
 import Corrida.br.com.forma.extrai.informacao.log.FormasDeExtracao;
+import Corrida.br.com.front.TelaInicial;
 
 public class CaractereDigitadoErrado implements FormasDeExtracao {
 	
+	private TelaInicial telaInicial;
+	
+	public CaractereDigitadoErrado() {
+		this.telaInicial = new TelaInicial();
+	}
+	
 	@Override
 	public Class<? extends FormasDeExtracao> verificaForma(EnumFormasDeExtracao respostaDoUsuario) {
-		System.out.println("Você digitou algo errado. Por favor, tente novamente \n");
+		this.telaInicial.digitouErrado();
 		return this.pegaForma();
 	}
 
