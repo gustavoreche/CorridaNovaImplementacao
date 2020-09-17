@@ -27,43 +27,43 @@ public class EntradaDoUsuarioTeste {
 	@Test
 	public void digitado_digitandoQualquerTexto_ok() {
 		String qualquerTexto = "qualquer texto";
-		Mockito.when(this.entrada.digitado()).thenReturn(qualquerTexto);
-		assertEquals(qualquerTexto, this.entrada.digitado());	
+		Mockito.when(this.entrada.pega()).thenReturn(qualquerTexto);
+		assertEquals(qualquerTexto, this.entrada.pega());	
 	}
 	
 	@Test
 	public void digitado_digitandoQualquerTexto_error() {
 		String qualquerTexto = "qualquer texto";
-		Mockito.when(this.entrada.digitado()).thenReturn(qualquerTexto);
-		assertFalse(this.entrada.digitado().isEmpty());	
+		Mockito.when(this.entrada.pega()).thenReturn(qualquerTexto);
+		assertFalse(this.entrada.pega().isEmpty());	
 	}
 	
 	@Test
 	public void digitado_digitandoVazio_ok() {
 		String qualquerTexto = "";
-		Mockito.when(this.entrada.digitado()).thenReturn(qualquerTexto);
-		assertTrue(this.entrada.digitado().isEmpty());	
+		Mockito.when(this.entrada.pega()).thenReturn(qualquerTexto);
+		assertTrue(this.entrada.pega().isEmpty());	
 	}
 	
 	@Test
 	public void digitado_digitandoVazio_error() {
 		String qualquerTexto = "";
-		Mockito.when(this.entrada.digitado()).thenReturn(qualquerTexto);
-		assertNotEquals("oi", this.entrada.digitado());
+		Mockito.when(this.entrada.pega()).thenReturn(qualquerTexto);
+		assertNotEquals("oi", this.entrada.pega());
 	}
 	
 	@Test
 	public void digitado_digitandoNullo_ok() {
 		String qualquerTexto = null;
-		Mockito.when(this.entrada.digitado()).thenReturn(qualquerTexto);
-		assertNull(this.entrada.digitado());
+		Mockito.when(this.entrada.pega()).thenReturn(qualquerTexto);
+		assertNull(this.entrada.pega());
 	}
 	
 	@Test
 	public void digitado_digitandoNullo_error() {
 		String qualquerTexto = null;
-		Mockito.when(this.entrada.digitado()).thenReturn(qualquerTexto);
-		assertNotEquals("", this.entrada.digitado());
+		Mockito.when(this.entrada.pega()).thenReturn(qualquerTexto);
+		assertNotEquals("", this.entrada.pega());
 	}
 
 }

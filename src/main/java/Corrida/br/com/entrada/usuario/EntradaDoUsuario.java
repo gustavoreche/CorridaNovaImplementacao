@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class EntradaDoUsuario {
 	
-	public String digitado() {
+	public String pega() {
 		@SuppressWarnings("resource")
 		Scanner entradaDoUsuario = new Scanner(System.in);
 		return entradaDoUsuario.nextLine();		
