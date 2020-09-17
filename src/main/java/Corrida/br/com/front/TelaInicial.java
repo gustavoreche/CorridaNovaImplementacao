@@ -22,4 +22,8 @@ public class TelaInicial {
 		System.out.println("Você escolheu encerrar o sistema. Muito obrigado!!");		
 	}
 
+	public void boasVindas() {
+		System.out.println("Bem vindo leitor de log!");		
+	}
+
 }

@@ -31,5 +31,10 @@ public class TelaInicialTeste {
 	public void sairDoSistema_exibeTexto() {
 		telaInicial.sairDoSistema();
 	}
+	
+	@Test
+	public void boasVindas_exibeTexto() {
+		telaInicial.boasVindas();
+	}
 
 }
